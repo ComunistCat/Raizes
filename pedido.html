@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pedido | Raízes do Nordeste</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="pedido">
+  <aside class="side-menu collapsed" id="side-menu">
+    <input class="menu-check" id="menu-check" type="checkbox" aria-label="Expandir ou recolher menu">
+    <label class="menu-toggle" for="menu-check" aria-label="Expandir ou recolher menu">
+      <i class="fa-solid fa-bars"></i>
+    </label>
+    <div class="side-brand">
+      <i class="fa-solid fa-utensils"></i>
+      <span>Raízes</span>
+    </div>
+    <nav class="side-nav" aria-label="Menu lateral">
+      <a href="menu.html"><i class="fa-solid fa-house"></i><span>Menu</span></a>
+      <a href="cardapio.html"><i class="fa-solid fa-bowl-food"></i><span>Cardápio</span></a>
+      <a href="meus-pedidos.html"><i class="fa-solid fa-receipt"></i><span>Meus Pedidos</span></a>
+      <a href="recompensas.html"><i class="fa-solid fa-gift"></i><span>Recompensas</span></a>
+      <a href="login.html"><i class="fa-solid fa-arrow-right-from-bracket"></i><span>Sair</span></a>
+    </nav>
+  </aside>
+  <main class="app-shell page-enter">
+    <header class="page-header with-action">
+      <div>
+        <p class="eyebrow">Resumo</p>
+        <h1>Meu pedido</h1>
+        <p>Revise os itens adicionados antes de finalizar.</p>
+      </div>
+      <a class="icon-btn back-btn" href="cardapio.html" aria-label="Voltar ao cardápio">
+        <i class="fa-solid fa-arrow-left"></i>
+      </a>
+    </header>
+
+    <section class="order-layout">
+      <div>
+        <div id="cart-items" class="cart-list"></div>
+        <p id="empty-cart" class="empty-state hidden">Nenhum item adicionado ao pedido.</p>
+      </div>
+
+      <aside class="summary-panel">
+        <!-- Resumo do pedido antes de pagar -->
+        <h2>Resumo</h2>
+        <div class="summary-row">
+          <span>Itens</span>
+          <strong id="summary-subtotal">R$ 0,00</strong>
+        </div>
+        <div class="summary-row">
+          <span>Entrega</span>
+          <strong id="summary-delivery">R$ 0,00</strong>
+        </div>
+        <div class="summary-total">
+          <span>Total</span>
+          <strong id="summary-total">R$ 0,00</strong>
+        </div>
+        <button id="checkout-btn" class="primary-btn" type="button">
+          <i class="fa-solid fa-credit-card"></i>
+          Finalizar Pedido
+        </button>
+
+        <div id="checkout-panel" class="checkout-panel hidden">
+          <!-- escolhas finais do cliente -->
+          <h3>Forma de recebimento</h3>
+          <div class="option-grid" id="service-options">
+            <button class="option-btn active" type="button" data-service="delivery">
+              <i class="fa-solid fa-motorcycle"></i>
+              Entregar no endereço cadastrado
+            </button>
+            <button class="option-btn" type="button" data-service="local">
+              <i class="fa-solid fa-chair"></i>
+              Comer no local
+            </button>
+            <button class="option-btn" type="button" data-service="pickup">
+              <i class="fa-solid fa-bag-shopping"></i>
+              Retirar pedido
+            </button>
+          </div>
+
+          <h3>Pagamento</h3>
+          <div class="payment-group">
+            <p>Pagamento na entrega</p>
+            <button class="payment-btn" type="button" data-payment="Dinheiro">
+              <i class="fa-solid fa-money-bill-wave"></i>
+              Dinheiro
+            </button>
+            <button class="payment-btn" type="button" data-payment="Cartão na entrega">
+              <i class="fa-solid fa-credit-card"></i>
+              Cartão
+            </button>
+          </div>
+          <div class="payment-group">
+            <p>Pagamento online</p>
+            <button class="payment-btn" type="button" data-payment="Pix">
+              <i class="fa-brands fa-pix"></i>
+              Pix
+            </button>
+            <button class="payment-btn" type="button" data-payment="Cartão online">
+              <i class="fa-solid fa-wallet"></i>
+              Cartão
+            </button>
+          </div>
+        </div>
+
+        <div id="payment-success" class="success-panel hidden">
+          <i class="fa-solid fa-circle-check"></i>
+          <h3>Pagamento realizado</h3>
+          <p>Você ganhou 5 pontos</p>
+          <a class="secondary-btn" href="menu.html">Voltar ao Menu</a>
+          <a class="primary-btn" href="meus-pedidos.html">Acompanhar Pedido</a>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <div id="loading-overlay" class="loading-overlay hidden" aria-live="polite">
+    <div class="loader-card">
+      <span class="loader"></span>
+      <i class="fa-solid fa-circle-check success-icon hidden"></i>
+      <strong id="loading-title">Processando pagamento</strong>
+      <p id="loading-text">Aguarde um instante</p>
+    </div>
+  </div>
+
+  <script src="mockData.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+

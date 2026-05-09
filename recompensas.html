@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recompensas | Raízes do Nordeste</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="recompensas">
+  <aside class="side-menu collapsed" id="side-menu">
+    <input class="menu-check" id="menu-check" type="checkbox" aria-label="Expandir ou recolher menu">
+    <label class="menu-toggle" for="menu-check" aria-label="Expandir ou recolher menu">
+      <i class="fa-solid fa-bars"></i>
+    </label>
+    <div class="side-brand">
+      <i class="fa-solid fa-utensils"></i>
+      <span>Raízes</span>
+    </div>
+    <nav class="side-nav" aria-label="Menu lateral">
+      <a href="menu.html"><i class="fa-solid fa-house"></i><span>Menu</span></a>
+      <a href="cardapio.html"><i class="fa-solid fa-bowl-food"></i><span>Cardápio</span></a>
+      <a href="meus-pedidos.html"><i class="fa-solid fa-receipt"></i><span>Meus Pedidos</span></a>
+      <a class="active" href="recompensas.html"><i class="fa-solid fa-gift"></i><span>Recompensas</span></a>
+      <a href="login.html"><i class="fa-solid fa-arrow-right-from-bracket"></i><span>Sair</span></a>
+    </nav>
+  </aside>
+  <main class="app-shell page-enter">
+    <header class="page-header">
+      <p class="eyebrow">Fidelidade</p>
+      <h1>Recompensas</h1>
+      <p>Troque seus pontos por itens especiais.</p>
+    </header>
+
+    <!-- pontos acumulados do usuário -->
+    <section class="points-banner">
+      <i class="fa-solid fa-star"></i>
+      <span>Total de pontos</span>
+      <strong id="user-points">0</strong>
+    </section>
+
+    <!-- Recompensa disponível no protótipo -->
+    <section class="catalog-grid" aria-label="Lista de recompensas">
+      <article class="dish-card reward-card">
+        <img src="images/Coca Cola Lata.png" alt="Coca Cola - Lata 350ml">
+        <div>
+          <h3>Coca Cola - Lata 350ml</h3>
+          <p>Custo: 10 pontos</p>
+        </div>
+        <button class="primary-btn" type="button" data-reward="reward-coca-lata">
+          <i class="fa-solid fa-gift"></i>
+          Resgatar
+        </button>
+      </article>
+    </section>
+  </main>
+
+  <script src="mockData.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+

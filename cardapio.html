@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cardápio | Raízes do Nordeste</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="cardapio">
+  <aside class="side-menu collapsed" id="side-menu">
+    <input class="menu-check" id="menu-check" type="checkbox" aria-label="Expandir ou recolher menu">
+    <label class="menu-toggle" for="menu-check" aria-label="Expandir ou recolher menu">
+      <i class="fa-solid fa-bars"></i>
+    </label>
+    <div class="side-brand">
+      <i class="fa-solid fa-utensils"></i>
+      <span>Raízes</span>
+    </div>
+    <nav class="side-nav" aria-label="Menu lateral">
+      <a href="menu.html"><i class="fa-solid fa-house"></i><span>Menu</span></a>
+      <a class="active" href="cardapio.html"><i class="fa-solid fa-bowl-food"></i><span>Cardápio</span></a>
+      <a href="meus-pedidos.html"><i class="fa-solid fa-receipt"></i><span>Meus Pedidos</span></a>
+      <a href="recompensas.html"><i class="fa-solid fa-gift"></i><span>Recompensas</span></a>
+      <a href="login.html"><i class="fa-solid fa-arrow-right-from-bracket"></i><span>Sair</span></a>
+    </nav>
+  </aside>
+  <main class="app-shell page-enter">
+    <header class="page-header with-action">
+      <div>
+        <p class="eyebrow">Pedido</p>
+        <h1>Cardápio</h1>
+        <p>Monte seu pedido com pratos, porções e bebidas.</p>
+      </div>
+      <a class="secondary-btn compact" href="pedido.html">
+        <i class="fa-solid fa-bag-shopping"></i>
+        Ver pedido
+      </a>
+    </header>
+
+    <!-- prato em destaque no topo -->
+    <section aria-label="Prato do dia">
+      <article class="special-card">
+        <div class="special-copy">
+          <p class="eyebrow">Prato do dia</p>
+          <h2>Tradicional</h2>
+          <p>Arroz, feijão carioca, bife de boi, alface e batata frita.</p>
+          <div class="price-line">
+            <span class="old-price">R$ 30,00</span>
+            <strong>R$ 22,50</strong>
+            <small>25% off</small>
+          </div>
+          <button class="primary-btn add-btn" type="button" data-add-item="tradicional">
+            <i class="fa-solid fa-plus"></i>
+            Adicionar
+          </button>
+        </div>
+        <img src="images/Tradicional.png" alt="Tradicional">
+      </article>
+    </section>
+
+    <!-- lista simples dos itens do cardápio -->
+    <section class="catalog-list" aria-label="Lista de pratos">
+      <div class="catalog-section">
+        <h2>Pratos</h2>
+        <div class="catalog-grid">
+          <article class="dish-card">
+            <img src="images/Strogonoff.png" alt="Strogonoff">
+            <div>
+              <h3>Strogonoff</h3>
+              <p>Arroz, strogonoff de frango, batata palha e tomate.</p>
+            </div>
+            <div class="card-bottom">
+              <strong>R$ 25,00</strong>
+              <button class="round-add" type="button" data-add-item="strogonoff" aria-label="Adicionar Strogonoff">
+                <i class="fa-solid fa-plus"></i>
+              </button>
+            </div>
+          </article>
+
+          <article class="dish-card">
+            <img src="images/Macarrão.png" alt="Macarrão">
+            <div>
+              <h3>Macarrão</h3>
+              <p>Macarrão com bacon crocante e alface fresca.</p>
+            </div>
+            <div class="card-bottom">
+              <strong>R$ 18,00</strong>
+              <button class="round-add" type="button" data-add-item="macarrao" aria-label="Adicionar Macarrão">
+                <i class="fa-solid fa-plus"></i>
+              </button>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <div class="catalog-section">
+        <h2>Porções</h2>
+        <div class="catalog-grid">
+          <article class="dish-card">
+            <img src="images/Batata.png" alt="Porção de Batata Frita">
+            <div>
+              <h3>Porção de Batata Frita</h3>
+              <p>Batatas fritas crocantes servidas em porção individual.</p>
+            </div>
+            <div class="card-bottom">
+              <strong>R$ 10,00</strong>
+              <button class="round-add" type="button" data-add-item="batata-frita" aria-label="Adicionar Porção de Batata Frita">
+                <i class="fa-solid fa-plus"></i>
+              </button>
+            </div>
+          </article>
+
+          <article class="dish-card">
+            <img src="images/Tilápia.png" alt="Porção de Tilápia">
+            <div>
+              <h3>Porção de Tilápia</h3>
+              <p>Iscas de tilápia douradas e sequinhas.</p>
+            </div>
+            <div class="card-bottom">
+              <strong>R$ 15,00</strong>
+              <button class="round-add" type="button" data-add-item="tilapia" aria-label="Adicionar Porção de Tilápia">
+                <i class="fa-solid fa-plus"></i>
+              </button>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <div class="catalog-section">
+        <h2>Bebidas</h2>
+        <div class="catalog-grid">
+          <article class="dish-card">
+            <img src="images/Coca Cola Lata.png" alt="Coca Cola - Lata 350ml">
+            <div>
+              <h3>Coca Cola - Lata 350ml</h3>
+              <p>Refrigerante lata 350ml.</p>
+            </div>
+            <div class="card-bottom">
+              <strong>R$ 5,00</strong>
+              <button class="round-add" type="button" data-add-item="coca-lata" aria-label="Adicionar Coca Cola - Lata 350ml">
+                <i class="fa-solid fa-plus"></i>
+              </button>
+            </div>
+          </article>
+
+          <article class="dish-card">
+            <img src="images/Coca Cola Garrafa.png" alt="Coca Cola - 1L">
+            <div>
+              <h3>Coca Cola - 1L</h3>
+              <p>Refrigerante garrafa 1 litro.</p>
+            </div>
+            <div class="card-bottom">
+              <strong>R$ 10,00</strong>
+              <button class="round-add" type="button" data-add-item="coca-1l" aria-label="Adicionar Coca Cola - 1L">
+                <i class="fa-solid fa-plus"></i>
+              </button>
+            </div>
+          </article>
+
+          <article class="dish-card">
+            <img src="images/Guaraná Lata.png" alt="Guaraná - Lata 350ml">
+            <div>
+              <h3>Guaraná - Lata 350ml</h3>
+              <p>Refrigerante guaraná lata 350ml.</p>
+            </div>
+            <div class="card-bottom">
+              <strong>R$ 5,00</strong>
+              <button class="round-add" type="button" data-add-item="guarana-lata" aria-label="Adicionar Guaraná - Lata 350ml">
+                <i class="fa-solid fa-plus"></i>
+              </button>
+            </div>
+          </article>
+
+          <article class="dish-card">
+            <img src="images/Guaraná Garrafa.png" alt="Guaraná - 1L">
+            <div>
+              <h3>Guaraná - 1L</h3>
+              <p>Refrigerante guaraná garrafa 1 litro.</p>
+            </div>
+            <div class="card-bottom">
+              <strong>R$ 10,00</strong>
+              <button class="round-add" type="button" data-add-item="guarana-1l" aria-label="Adicionar Guaraná - 1L">
+                <i class="fa-solid fa-plus"></i>
+              </button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <a class="cart-float" href="pedido.html" aria-label="Visualizar itens do pedido">
+    <span>Visualizar itens do pedido</span>
+    <strong id="cart-total">R$ 0,00</strong>
+  </a>
+
+  <script src="mockData.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+

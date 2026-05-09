@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu | Raízes do Nordeste</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="menu">
+  <aside class="side-menu collapsed" id="side-menu">
+    <input class="menu-check" id="menu-check" type="checkbox" aria-label="Expandir ou recolher menu">
+    <label class="menu-toggle" for="menu-check" aria-label="Expandir ou recolher menu">
+      <i class="fa-solid fa-bars"></i>
+    </label>
+    <div class="side-brand">
+      <i class="fa-solid fa-utensils"></i>
+      <span>Raízes</span>
+    </div>
+    <nav class="side-nav" aria-label="Menu lateral">
+      <a class="active" href="menu.html"><i class="fa-solid fa-house"></i><span>Menu</span></a>
+      <a href="cardapio.html"><i class="fa-solid fa-bowl-food"></i><span>Cardápio</span></a>
+      <a href="meus-pedidos.html"><i class="fa-solid fa-receipt"></i><span>Meus Pedidos</span></a>
+      <a href="recompensas.html"><i class="fa-solid fa-gift"></i><span>Recompensas</span></a>
+      <a href="login.html"><i class="fa-solid fa-arrow-right-from-bracket"></i><span>Sair</span></a>
+    </nav>
+  </aside>
+  <main class="app-shell page-enter">
+    <header class="page-header">
+      <p class="eyebrow">Início</p>
+      <h1>Menu principal</h1>
+      <p>Escolha uma área para continuar seu pedido.</p>
+    </header>
+
+    <section class="quick-grid" aria-label="Navegação principal">
+      <a class="nav-tile" href="cardapio.html">
+        <i class="fa-solid fa-bowl-food"></i>
+        <span>Cardápio</span>
+      </a>
+      <a class="nav-tile" href="meus-pedidos.html">
+        <i class="fa-solid fa-receipt"></i>
+        <span>Meus Pedidos</span>
+      </a>
+      <a class="nav-tile" href="recompensas.html">
+        <i class="fa-solid fa-gift"></i>
+        <span>Recompensas</span>
+      </a>
+    </section>
+  </main>
+
+  <script src="mockData.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+

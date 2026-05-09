@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | Raízes do Nordeste</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="login">
+  <main class="login-page page-enter">
+    <section class="login-visual" aria-label="Apresentação do restaurante">
+      <!-- nome do restaurante -->
+      <div class="brand-mark">
+        <i class="fa-solid fa-utensils"></i>
+      </div>
+      <h1>Raízes do Nordeste</h1>
+    </section>
+
+    <section class="auth-panel" aria-label="Login e cadastro">
+      <div class="auth-card">
+        <p class="eyebrow">Bem-vindo</p>
+        <h2>Acesse sua conta</h2>
+
+        <form id="login-form" class="form-stack">
+          <!-- dados básicos para entrar -->
+          <label for="login-email">E-mail</label>
+          <input id="login-email" type="email" placeholder="cliente@email.com" autocomplete="email" required>
+
+          <label class="check-row">
+            <input id="lgpd-check" type="checkbox" required>
+            <span>Li e aceito os Termos de Uso e a Política de Privacidade, autorizando o tratamento dos meus dados conforme a LGPD.</span>
+          </label>
+
+          <button class="primary-btn" type="submit">
+            <i class="fa-solid fa-right-to-bracket"></i>
+            Login
+          </button>
+          <button id="show-register" class="secondary-btn" type="button">
+            <i class="fa-solid fa-user-plus"></i>
+            Cadastrar-se como cliente
+          </button>
+          <p id="login-message" class="message" aria-live="polite"></p>
+        </form>
+
+        <form id="register-form" class="form-stack hidden">
+          <div class="form-head">
+            <h3>Novo cadastro</h3>
+            <button id="hide-register" class="icon-btn" type="button" aria-label="Fechar cadastro">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+          <label for="register-name">Nome</label>
+          <input id="register-name" type="text" autocomplete="name" required>
+          <label for="register-email">E-mail</label>
+          <input id="register-email" type="email" autocomplete="email" required>
+          <label for="register-phone">Telefone</label>
+          <input id="register-phone" type="tel" autocomplete="tel" required>
+          <label for="register-address">Endereço</label>
+          <input id="register-address" type="text" autocomplete="street-address" required>
+          <button class="primary-btn" type="submit">
+            <i class="fa-solid fa-circle-check"></i>
+            Cadastrar
+          </button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <div id="loading-overlay" class="loading-overlay hidden" aria-live="polite">
+    <div class="loader-card">
+      <span class="loader"></span>
+      <i class="fa-solid fa-circle-check success-icon hidden"></i>
+      <strong id="loading-title">Carregando</strong>
+      <p id="loading-text">Aguarde um instante</p>
+    </div>
+  </div>
+
+  <script src="mockData.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+
